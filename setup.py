@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='bow',
     version='0.1',
-    description='Manager isolated environments for your projects using Docker',
+    description='Manage isolated environments for your projects using Docker',
     url='https://github.com/despawnerer/bow',
     author='Aleksei Voronov',
     author_email='despawn@gmail.com',
