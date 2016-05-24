@@ -17,10 +17,14 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
     ],
-    scripts=['bow'],
     install_requires=[
         'click>=6',
         'docker-py>=1.8',
         'dockerpty>=0.4',
-    ]
+    ],
+    py_modules=['bow'],
+    entry_points='''
+        [console_scripts]
+        bow=bow:bow
+    '''
 )
