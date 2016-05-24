@@ -1,6 +1,8 @@
 Bow
 ===
 
+[![PyPI version](https://badge.fury.io/py/bow.svg)](https://badge.fury.io/py/bow)
+
 Bow is a CLI utility to manage isolated environments for your projects using Docker to avoid conflicts between dependencies, different versions of interpreters etc. It's like `virtualenv` + `virtualenvwrapper` or `pew`, but language-agnostic and even more isolated.
 
 
@@ -14,7 +16,7 @@ Requirements
 Setup
 =====
 
-1. Install.
+1. `pip3 install bow`
 2. Set `PROJECT_HOME` environment variable to the folder where your projects reside.
 
 
