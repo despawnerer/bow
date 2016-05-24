@@ -33,4 +33,5 @@ Caveats
 
 - Docker containers created by `bow` for your projects need to be manually stopped when you stop using them. Otherwise, they will be kept running forever.
 - There is no easy way to use e.g. `python` interpreter that is installed within the container from the host system (for code completion, for example), unless you're using something like PyCharm which has that feature out of the box.
+- It always runs `bash` inside the container.
 - This is pre-release software, so use at your own risk.
