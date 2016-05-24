@@ -20,12 +20,16 @@ def bow():
 
 
 @bow.command()
-@click.option('--image', '-i')
+@click.option('--image', '-i', help="Specify Docker image for this project.")
+@click.option('--bare', '-b', is_flag=True)
 @click.argument('name')
-def create(name, image):
+def create(name, image, bare):
     """
     Create a new project
     """
+    if bool(bare) == bool(image):
+        raise click.UsageError("Specify either --bare or image using --image.")
+
     path = get_project_path(name)
 
     print("Creating %s..." % path)
@@ -34,7 +38,7 @@ def create(name, image):
     except FileExistsError:
         die("%s already exists." % path)
 
-    if image:
+    if not bare:
         print("Creating container with image %s..." % image)
         client = docker.Client()
         try:
