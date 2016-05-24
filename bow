@@ -21,7 +21,7 @@ def bow():
 
 @bow.command()
 @click.option('--image', '-i', help="Specify Docker image for this project.")
-@click.option('--bare', '-b', is_flag=True)
+@click.option('--bare', '-b', is_flag=True, help="Don't create a container for this project.")
 @click.argument('name')
 def create(name, image, bare):
     """
