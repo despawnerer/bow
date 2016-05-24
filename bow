@@ -25,7 +25,7 @@ def bow():
 @click.argument('name')
 def create(name, image, bare):
     """
-    Create a new project
+    Create a new project.
     """
     if bool(bare) == bool(image):
         raise click.UsageError("Specify either --bare or image using --image.")
